@@ -1008,6 +1008,18 @@ button:focus{
     color: #ffffff;
     padding: 5px 15px 5px 5px;
 }
+
+.posted-by ul li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #222222;
+}
+
+.posted-by ul li a:hover{
+	color: #cfa671;
+}
+
 .inner-blog-detail {
     background: #ffffff;
     position: relative;
@@ -1028,7 +1040,7 @@ button:focus{
     color: #cfa671;
 }
 .inner-blog-detail p {
-    padding: 10px 0px;
+    padding: 0px 0px;
 }
 .details-page blockquote {
     border-left: 5px solid #cfa671;
