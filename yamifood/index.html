@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><!-- Basic -->
 <head>
+	<script src="https://kit.fontawesome.com/b0b8434f7e.js" crossorigin="anonymous"></script>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
    
@@ -50,11 +51,11 @@
 						<li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
 						<li class="nav-item"><a class="nav-link" href="#menu">Thực đơn</a></li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Tài khoản</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="reservation.html">Reservation</a>
-								<a class="dropdown-item" href="stuff.html">Stuff</a>
-								<a class="dropdown-item" href="gallery.html">Gallery</a>
+								<a class="dropdown-item" href="like.html"><i class="fa-solid fa-heart"></i> Món ăn yêu thích</a>
+								<a class="dropdown-item" href="share.html"><i class="fa-solid fa-share"></i> Món ăn đã chia sẻ</a>
+								<a class="dropdown-item" href="comment.html"><i class="fa-solid fa-comment"></i> Món ăn đã đánh giá</a>
 							</div>
 						</li>
 						<li class="nav-item dropdown">
@@ -140,34 +141,19 @@
 	</div>
 	<!-- End About -->
 	
-	<!-- Smooth scrolling script -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script>
-		$('a[href^="#"]').on('click', function(event) {
-			var target = $(this.getAttribute('href'));
-			if( target.length ) {
-				event.preventDefault();
-				$('html, body').stop().animate({
-					scrollTop: target.offset().top
-				}, 1500); // Change 1500 to adjust the scroll speed
-			}
-		});
-	</script>
-
-	
 	<!-- Start QT -->
-	<div class="qt-box qt-background">
+	<!-- <div class="qt-box qt-background">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 ml-auto mr-auto text-center">
 					<p class="lead ">
 						"Nấu cho mình, cho người và cho đời thêm vui"
-					</p>
+					</p> -->
 					<!-- <span class="lead">Michael Strahan</span> -->
-				</div>
+				<!-- </div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- End QT -->
 	
 	<!-- Start Menu -->
@@ -203,6 +189,7 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6 special-grid drinks" onclick="redirectToBlogDetails()">
 					<div class="gallery-single fix">
+						<button class="heart-btn"><i class="fa-solid fa-heart"></i></button>
 						<img src="images/img-01.jpg" class="img-fluid" alt="Image">
 						<div class="why-text">
 							<h4>Phở bò</h4>
@@ -473,5 +460,18 @@
 		}
 	</script>
 
+	<!-- Smooth scrolling script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$('a[href^="#"]').on('click', function(event) {
+			var target = $(this.getAttribute('href'));
+			if( target.length ) {
+				event.preventDefault();
+				$('html, body').stop().animate({
+					scrollTop: target.offset().top
+				}, 1500); // Change 1500 to adjust the scroll speed
+			}
+		});
+	</script>
 </body>
 </html>

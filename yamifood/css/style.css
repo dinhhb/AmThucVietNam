@@ -1345,7 +1345,49 @@ blockquote {
 	font-size: 30px;
 }
 
+  .edit-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .delete-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .edit-btn, .delete-btn, .heart-btn:hover {
+    color: #cfa671;
+  }
 
+  .heart-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  hr {
+    color: #9f9f9f;
+    height: 1px;
+    border: none;
+    background-color: #9f9f9f;
+  }
 
 
 
