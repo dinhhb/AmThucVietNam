@@ -53,19 +53,26 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Công thức</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="add-form/index.html"><i class="fa-solid fa-plus"></i> Thêm công thức</a>
 								<a class="dropdown-item" href="like.html"><i class="fa-solid fa-heart"></i> Công thức yêu thích</a>
 								<a class="dropdown-item" href="share.html"><i class="fa-solid fa-share"></i> Công thức đã chia sẻ</a>
 								<a class="dropdown-item" href="comment.html"><i class="fa-solid fa-comment"></i> Công thức đã đánh giá</a>
 							</div>
 						</li>
-						<li class="nav-item dropdown">
+						<!-- <li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Tài khoản</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="add-form/index.html"><i class="fa-solid fa-plus"></i> Thêm công thức</a>
 								<a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
 							</div>
+						</li> -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Account</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a id="login-button" class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Login</a>
+								<a id="logout-button" class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+							</div>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="login-form-20/index1.html">Đăng nhập</a></li>
+						<!-- <li class="nav-item"><a class="nav-link" href="login-form-20/index1.html">Đăng nhập</a></li> -->
 					</ul>
 				</div>
 			</div>
@@ -473,5 +480,33 @@
 			}
 		});
 	</script>
+
+<script>
+    const loginButton = document.getElementById("login-button");
+	const logoutButton = document.getElementById("logout-button")
+	userIsLoggedIn = true;
+
+    // check if the user is logged in
+    if (userIsLoggedIn) {
+        // set the button text to "Logout"
+        loginButton.innerHTML = "Logout";
+		loginButton.removeAttribute("href");
+        // add a click event listener to the button to log out the user
+        // loginButton.addEventListener("click", function() {
+        //     logoutUser();
+        //     // after logging out, redirect the user to the homepage
+        //     window.location.href = "/";
+        // });
+    } else {
+        // set the button text to "Login"
+        loginButton.innerText = "Login";
+        // add a click event listener to the button to open the login modal
+        loginButton.addEventListener("click", function() {
+            openLoginModal();
+        });
+    }
+
+
+</script>
 </body>
 </html>
